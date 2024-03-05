@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+    <title>Neurona Artificial</title>
+</head>
+<body>
+    <h1>Neurona Artificial</h1>
+
+    <label for="input1">Input 1:</label>
+    <input type="number" id="input1" value="1">
+
+    <label for="input2">Input 2:</label>
+    <input type="number" id="input2" value="1">
+
+    <button onclick="trainPerceptron()">Train Perceptron</button>
+    <button onclick="predict()">Predict</button>
+
+    <p>Output: <span id="output"></span></p>
+
+    <script src="perceptron.js"></script>
+</body>
+</html>
