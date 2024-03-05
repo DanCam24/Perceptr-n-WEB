@@ -2,6 +2,7 @@ class Perceptron {
     constructor() {
         this.weights = [0, 0];
         this.bias = 0;
+        this.iterations = 0;
     }
 
     train(data, labels) {
@@ -20,6 +21,8 @@ class Perceptron {
                     this.weights[j] += learningRate * error * inputs[j];
                 }
                 this.bias += learningRate * error;
+
+                this.iterations++;
             }
         }
     }
@@ -40,7 +43,7 @@ function trainPerceptron() {
     const trainingData = [[0, 0], [0, 1], [1, 0], [1, 1]];
     const labels = [0, 0, 0, 1];
     perceptron.train(trainingData, labels);
-    alert('Perceptron trained successfully!');
+    alert(`Perceptron trained successfully! Iterations: ${perceptron.iterations}`);
 }
 
 function predict() {
@@ -53,6 +56,5 @@ function predict() {
     const input2 = parseFloat(document.getElementById('input2').value);
 
     const output = perceptron.predict([input1, input2]);
-
     document.getElementById('output').innerText = output;
 }
