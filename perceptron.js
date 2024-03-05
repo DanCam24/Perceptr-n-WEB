@@ -16,7 +16,6 @@ class Perceptron {
                 const prediction = this.predict(inputs);
                 const error = target - prediction;
 
-                // Update weights and bias
                 for (let j = 0; j < this.weights.length; j++) {
                     this.weights[j] += learningRate * error * inputs[j];
                 }
